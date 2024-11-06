@@ -1,0 +1,6 @@
+{ 
+    "liveServer.settings.ignoreFiles": [
+        "Backend/**"
+    ],
+    "git.ignoreLimitWarning": true
+}
