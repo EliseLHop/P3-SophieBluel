@@ -7,17 +7,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-<header>
+<!--<header>
+	<div class="admin-bar"><i class="fa-regular fa-pen-to-square" ></i> Mode édition</div>
+</header> -->
+<header id="main-header" style="margin-top: 50px;">
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
+			<li><a href="#portfolio">projets</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="login.html" id="login">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -35,52 +41,57 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+
+	<div class="projets-titre">
+		<h2 >Mes Projets</h2>
+
+		<!--<a class="modifier"><i class="fa-regular fa-pen-to-square" ></i> Modifier</a> -->
+		<div id="modal" class="modal" style="display: none;">
+  			
+			<div class="modal-content" >
+				<div class="galerie-photos">
+					<span class="close" id="closeGallery">&times;</span>
+					<h3>Galerie photo</h3>
+					<div class="projets-presents"></div>
+					<input id="ajouter" type="submit" value="Ajouter une photo">
+				</div>
+				<div class="formulaire-ajout" >
+					<i class="fa-solid fa-arrow-left back-arrow"></i>
+					<span class="close" id="closeForm">&times;</span>
+					<h3>Ajout photo</h3>
+					<div class="upload-container">
+						<div class="upload-photo">
+							<i class="fa-regular fa-image img-logo"></i>	
+							<label for="ajouter-photo">+ Ajouter photo</label>
+							<input class="browse-project" id="ajouter-photo" type="file" accept="image/*" >
+							<p>jpg, png : 4mo max</p>
+						</div>
+						<div class="preview">
+							<img id="previewImage" src="" alt="">
+						</div>
+					</div>
+					<div class="form-fields">
+						<label class="form-titre" for="titre">Titre</label>
+						<input class="titre" type="text" id="titre" name="titre" placeholder="Titre">
+						<label for="categorie">Catégorie</label>
+						<select class="mes-categories" id="mescategories" name="categorie">							
+							
+							<!-- Options ici -->
+						</select>
+					</div>
+					<input class="lets-update" id="valider" type="submit" value="Valider" disabled>
+
+				</div>
+    		</div>
+			
+		</div>
+	</div>
+
+		<div class="MesFiltres">
+			<div class="tous" data-idcategory="0" id="Tous">Tous</div>
+		</div>
 		<div class="gallery">
-			<!-- <figure>
-				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
-				<figcaption>Abajour Tahina</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V" id="image2">
-				<figcaption>Appartement Paris V</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
-				<figcaption>Restaurant Sushisen - Londres</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
-				<figcaption>Villa “La Balisiere” - Port Louis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
-				<figcaption>Structures Thermopolis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
-				<figcaption>Appartement Paris X</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
-				<figcaption>Pavillon “Le coteau” - Cassis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
-				<figcaption>Villa Ferneze - Isola d’Elba</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
-				<figcaption>Appartement Paris XVIII</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
-				<figcaption>Bar “Lullaby” - Paris</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
-				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure> -->
+			<!-- </figure> -->
 		</div>
 	</section>
 	<section id="contact">
