@@ -62,7 +62,7 @@ async function getCategories() {
 getCategories();
 
 
-
+//Je crée mes filtres
 function setFilter(data) {
   
   const div = document.createElement("div");
@@ -93,7 +93,7 @@ function setFilter(data) {
   
 };
 
-
+//Tous
 let AllProject=document.getElementById("Tous");
   AllProject.addEventListener("click", () => {
     const galleryItems = document.querySelectorAll(".gallery figure");
@@ -135,6 +135,8 @@ changeLogin.removeAttribute('href');
 
 changeLogin.addEventListener('click', function () {
   sessionStorage.removeItem('token'); // Supprime le token
+  sessionStorage.removeItem('id'); // Supprime l'id
+
   location.reload(); // Recharge la page
 });
 
