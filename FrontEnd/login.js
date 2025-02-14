@@ -6,13 +6,11 @@ let seConnecter = document.getElementById("connect");
     console.log(email);
     let userPassword = document.getElementById("password");
     let password = userPassword.value;
-    console.log(password);
 
     const donnees = {
         "email": email,
         "password": password
     }
-    console.log(donnees)
     
     //email: sophie.bluel@test.tld
     //password: S0phie 
@@ -49,8 +47,6 @@ let seConnecter = document.getElementById("connect");
             const data = await response.json();
             sessionStorage.setItem('token', data.token);
             sessionStorage.setItem('UserId', data.userId)
-            console.log("Connexion réussie :", data);
-
             
             //alert("Connexion réussie !");
             

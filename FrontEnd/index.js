@@ -49,7 +49,6 @@ async function getCategories() {
     }
 
     const json = await response.json();
-    console.log(json);
     for (let i = 0; i < json.length; i++) {
 
       setFilter(json[i]);
@@ -81,9 +80,7 @@ function setFilter(data) {
 
       });
       
-      let Gallery = document.querySelector(".gallery");
-      console.log(Gallery);
- 
+      let Gallery = document.querySelector(".gallery"); 
   })
   div.innerHTML = data.name;
   //si balise existe alors append
@@ -317,7 +314,6 @@ async function postProject() {
       }
 
       const json = await response.json(); 
-      console.log(json);
 
       setFigure(json);
       setFigureModale(json);
